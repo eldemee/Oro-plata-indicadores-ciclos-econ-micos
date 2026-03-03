@@ -10,8 +10,8 @@ library(plm)
 library(car)
 library(stargazer)
 
-silver <- read.csv('C:/Users/demet/Downloads/chart_20260219T160151.csv', sep = ';', dec = ',')
-gold <- read.csv('C:/Users/demet/Downloads/chart_20260219T160403.csv', sep = ';', dec = ',')
+silver <- read.csv('chart_20260219T160151.csv', sep = ';', dec = ',')
+gold <- read.csv('chart_20260219T160403.csv', sep = ';', dec = ',')
 silver$Date <- as.Date(silver$Date, format = c('%m/%d/%Y'))
 gold$Date <- as.Date(gold$Date, format = c('%m/%d/%Y'))
 
@@ -41,8 +41,8 @@ p1 / p2
 
 cor(commodities$gold, commodities$silver)
 
-ip <- read.csv('C:/Users/demet/Downloads/INDPRO1.csv')
-unemp <- read.csv('C:/Users/demet/Downloads/UNRATE.csv')
+ip <- read.csv('INDPRO1.csv')
+unemp <- read.csv('UNRATE.csv')
 summary(ip)
 ip$date <- as.Date(ip$observation_date, format = c('%Y-%m-%d'))
 unemp$date <- as.Date(unemp$observation_date, format = c('%Y-%m-%d'))
@@ -84,8 +84,8 @@ tabla %>%
 
 
 
-VXSLV <- read.csv('C:/Users/demet/Downloads/VXSLVCLS.csv')
-GVZ <- read.csv('C:/Users/demet/Downloads/GVZCLS.csv')
+VXSLV <- read.csv('VXSLVCLS.csv')
+GVZ <- read.csv('GVZCLS.csv')
 head(GVZ)
 GVZ$observation_date <- as.Date(GVZ$observation_date, format = c('%Y-%m-%d'))
 VXSLV$observation_date <- as.Date(VXSLV$observation_date, format = c('%Y-%m-%d'))
@@ -134,7 +134,7 @@ names(volatility) <- c('Fecha', 'VXSLVCLS', 'GVZCLS')
 
 
 
-popu <- read.csv('C:/Users/demet/Downloads/POPTHM.csv')
+popu <- read.csv('POPTHM.csv')
 popu$observation_date <- as.Date(popu$observation_date, format = c('%Y-%m-%d'))
 colnames(popu) <- c('Fecha', 'poblacion')
 
@@ -237,3 +237,4 @@ stargazer(
           no.space = TRUE,
           notes = "Errores estándar Newey-West entre paréntesis."
 )
+
