@@ -1,1 +1,1 @@
-# Oro-plata-indicadores-ciclos-econ-micos
+# Oro-plata-indicadores-ciclos-económicos
